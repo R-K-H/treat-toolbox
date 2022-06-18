@@ -49,7 +49,7 @@ export default function IndexPage(props: Props) {
         title="Projects"
         section="projects"
         projects={projects}
-        selectedProjectId={undefined}
+        selectedProjectId={null}
       >
         <main className="px-8 py-12">
           <Link href={"/projects/create"} passHref={true}>
@@ -70,7 +70,7 @@ export default function IndexPage(props: Props) {
         title="Projects"
         section="projects"
         projects={projects}
-        selectedProjectId={undefined}
+        selectedProjectId={null}
       >
         <div>
           <HeaderWithAddButton

@@ -7,7 +7,7 @@ import { GetServerSideProps } from "next";
 
 interface Props {
   projects: Project[];
-  projectId: string;
+  projectId: string | null;
 }
 
 export default function CreatePage(props: Props) {
@@ -41,7 +41,7 @@ export default function CreatePage(props: Props) {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   try {
-    const projectId = context.query.projectId;
+    const projectId = context.query.projectId ? context.query.projectId : null;
     const projects = await Projects.all();
 
     return {

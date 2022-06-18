@@ -7,7 +7,7 @@ module.exports = {
     domains: ["pbs.twimg.com", "www.gravatar.com", "localhost"],
   },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    config.plugins.push(new IgnorePlugin(/functions/));
+    //config.plugins.push(new IgnorePlugin(/functions/));
     return config;
   },
   experimental: {

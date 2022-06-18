@@ -10,7 +10,7 @@ type Props = {
   title: string;
   section: string;
   projects: Project[];
-  selectedProjectId: string | undefined;
+  selectedProjectId: string | null;
 };
 
 type Page = {

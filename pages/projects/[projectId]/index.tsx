@@ -76,7 +76,7 @@ export default function IndexPage(props: Props) {
         title="Projects"
         section="projects"
         projects={projects}
-        selectedProjectId={undefined}
+        selectedProjectId={null}
       >
         <div>
           <Header title={project.name} />

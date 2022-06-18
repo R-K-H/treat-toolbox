@@ -12,19 +12,20 @@ const addProjectKey = "__add__";
 
 interface Props {
   projects: Project[];
-  selectedProjectId: string | undefined;
+  selectedProjectId: string | null;
 }
 
 export default function MainNavProjectDropdown({
   projects,
   selectedProjectId,
 }: Props) {
-  let selectedProject: Project | undefined = undefined;
+  let selectedProject: Project | null = null;
 
-  if (selectedProjectId) {
-    selectedProject = projects.find(
+  if (selectedProjectId !== null) {
+    let foundProjects = projects.find(
       (project) => project.id == selectedProjectId
     );
+    selectedProject = foundProjects === undefined ? null : foundProjects
   }
 
   const router = useRouter();
